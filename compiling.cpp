@@ -1,37 +1,49 @@
 /*****
-*Nombre: compiling.cpp
-*Propósito: Aprender a declarar, asignar y mostrar variables en C
-*Autor: Ander Conal
+*ES_Nombre: compiling.cpp
+*EN_Name: compiling.cpp
+*ES_PropÃ³sito: Aprender a declarar, asignar y mostrar variables en C
+*EN_Purpose: Learn to declare, assign and print variables on C
+*ES_Autor: Ander Conal
+*EN_Author: Ander Conal
 *****/
 
-/*Importamos la librería stdio.h "standard input-output header"*/
+/*ES_Importamos la librerÃ­a stdio.h "standard input-output header"*/
+/*EN_We import the library named stdio.h (standard input-output header)*/
 #include <stdio.h>
 
-/*Librería necesaria para utilizar la función system()*/
+/*ES_LibrerÃ­a necesaria para utilizar la funciÃ³n system()*/
+/*EN_Necessary library for use the system() function*/
 #include <stdlib.h>
 
-/*Función llamada automáticamente cuando el programa es ejecutado. Devuelve un entero y no recibe argumentos*/
+/*ES_FunciÃ³n llamada automÃ¡ticamente cuando el programa es ejecutado. Devuelve un entero y no recibe argumentos*/
+/*EN_This function is automatically called when the program runs. Returns an integer and no arguments (void)*/
 int main(void)
 {
-	/*Declaramos las variables*/
+	/*ES_Declaramos las variables*/
+	/*EN_We declare the variables*/
 	int alto, largo, ancho, volumen, peso;
 
-	/*Asignamos un valor a cada variable*/
+	/*ES_Asignamos un valor a cada variable*/
+	/*EN_We assign a value for each variable*/
 	alto = 8;
 	largo = 12;
 	ancho = 10;
 	volumen = alto * largo * ancho;
 	peso = (volumen + 165) / 166;
 
-	//Utilizamos la función printf para mostrar el texto que deseamos.
-	//%d es un marcador de posición que indica dónde se imprimirá la variable entera correspondiente.
+	//ES_Utilizamos la funciÃ³n printf() para mostrar el texto que deseamos.
+	//EN_We use the printf() function to display the desired text on screen.
+	//ES_%d es un marcador de posiciÃ³n que indica dÃ³nde se imprimirÃ¡ la variable entera correspondiente.
+	//EN_%d is a placeholder indicating where the value of a variable is to be filled in during printing.
 	printf("Dimensiones : %dx%dx%d\n", largo, ancho, alto);
-	printf("Volumen (pulgadas cúbicas) : %d\n", volumen);
+	printf("Volumen (pulgadas cÃºbicas) : %d\n", volumen);
 	printf("Peso dimensional (libras) : %d\n", peso);
 
-	/*Utilizamos esta función para que el programa no se cierre hasta que pulsemos una tecla*/
+	/*ES_Utilizamos esta funciÃ³n para que el programa no se cierre hasta que pulsemos una tecla*/
+	/*EN_We use this function because we donÂ´t want to close the program until a key is pressed*/
 	system("pause");
 
-	/*Indicamos que el programa termina de manera natural devolviendo el entero 0*/
+	/*ES_Indicamos que el programa termina de manera natural devolviendo el entero 0*/
+	/*EN_We indicate that the program terminates naturally returning the 0 integer*/
 	return 0;
 }
